@@ -40,4 +40,18 @@ const triangularNumber = function(num) {
   return num + triangularNumber(num-1);
 };
 
-console.log(triangularNumber(6));
+// console.log(triangularNumber(6));
+
+const strSplitter=function(string,seperator,result=[]){
+  
+  if(string.indexOf(seperator)===-1)
+  {
+     result.push(string);
+     return result
+  }
+  
+   result.push(string.slice(0,string.indexOf(seperator)))
+  return strSplitter(string.slice(string.indexOf(seperator)+1),seperator,result);
+}
+
+console.log(strSplitter('02/20/2020','/'))
