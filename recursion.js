@@ -19,16 +19,25 @@ const powerCalculator = function(base, exponent) {
   if (exponent === 0)
     return 1;
   return powerCalculator(base, exponent - 1) * base;
-}
+};
 
-// console.log(powerCalculator(2, 0));
+//console.log(powerCalculator(2, 0));
 
-//cat tac
-const reverseString = function(string){
-  if (string === '')
-    return '';
-    
-  return string[string.length-1]+reverseString(string.slice(0,string.length-1)) 
-}
+const reverseString = function(string){ 
+  if (string === '') return '';
 
-console.log(reverseString('cat'))
+  return string[string.length-1]+reverseString(string.slice(0,string.length-1)); 
+};
+
+//console.log(reverseString('cat'));
+
+//nth Triangular Number
+
+const triangularNumber = function(num) {
+  if (num === 1) {
+    return 1;
+  }
+  return num + triangularNumber(num-1);
+};
+
+console.log(triangularNumber(6));
