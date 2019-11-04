@@ -9,6 +9,16 @@ const countSheep = function(num){
   countSheep(num-1); 
 };
 
-countSheep(3);
+//countSheep(3);
 
-//countSheep(num-1) return
+//Power Calculator
+
+const powerCalculator = function(base, exponent) {
+  if (exponent < 0)
+    return 'exponent should be >= 0';
+  if (exponent === 0)
+    return 1;
+  return powerCalculator(base, exponent - 1) * base;
+}
+
+console.log(powerCalculator(2, 0));
