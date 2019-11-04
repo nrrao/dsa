@@ -46,12 +46,26 @@ const strSplitter=function(string,seperator,result=[]){
   
   if(string.indexOf(seperator)===-1)
   {
-     result.push(string);
-     return result
+    result.push(string);
+    return result;
   }
   
-   result.push(string.slice(0,string.indexOf(seperator)))
+  result.push(string.slice(0,string.indexOf(seperator)));
   return strSplitter(string.slice(string.indexOf(seperator)+1),seperator,result);
-}
+};
 
-console.log(strSplitter('02/20/2020','/'))
+//console.log(strSplitter('02/20/2020','/'))
+
+const fibonacci = function(num, seq=[]) {
+  if(num === 1) {
+    return [1, 1];
+  }
+  if(seq.length === num-1) {
+    return seq;
+  }
+  seq = fibonacci(num-1);
+  seq.push(seq[seq.length-1] + seq[seq.length-2]);
+  return seq;
+};
+
+console.log(fibonacci(7));
