@@ -68,4 +68,46 @@ const fibonacci = function(num, seq=[]) {
   return seq;
 };
 
-console.log(fibonacci(7));
+// console.log(fibonacci(7));
+
+const factorial = function(num){
+  if (num === 1)
+    return 1;
+  return num * factorial(num-1);
+};
+
+// console.log(factorial(5));
+
+let mySmallMaze = [
+  [' ', ' ', ' '],
+  [' ', '*', ' '],
+  [' ', ' ', 'e']
+];
+
+let maze = [
+  [' ', ' ', ' ', '*', ' ', ' ', ' '],
+  ['*', '*', ' ', '*', ' ', '*', ' '],
+  [' ', ' ', ' ', ' ', ' ', ' ', ' '],
+  [' ', '*', '*', '*', '*', '*', ' '],
+  [' ', ' ', ' ', ' ', ' ', ' ', 'e']
+];
+
+const findWay = function(arrayMaze,result=''){
+  for (let i=0; i<arrayMaze.length; i++){
+    if(arrayMaze[i])
+    
+      for(let j=1; j<arrayMaze[i].length;j++)
+      {
+        console.log(arrayMaze[i][j])
+        // if(arrayMaze[i][j] === ' ')
+        //   result+'R';
+        // if (arrayMaze[i][j]  === '*')
+        //   result+'D';
+        // if(arrayMaze[i][j] === 'e')
+        //   return result;
+      }
+  }
+  
+};
+
+console.log(findWay(mySmallMaze));
