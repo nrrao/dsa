@@ -1,0 +1,10 @@
+1: O(1), O(n)
+2. isEven has constant run time complexity (O(1))
+3. areYouHere has polynomial run time complexity (O(n^2))
+4. doubleArrayValues has linear run time complexity (O(n))
+5. naiveSearch has linear run time complexity (O(n))
+6. createPairs has polynomial run time complexity (O(n^2))
+7. generateFib has linear run time complexity (O(n))
+8. efficientSearch has logarithmic run time complexity (O(log n))
+9. findRandomElement has constant run time complexity (O(1)).
+10. isPrime has linear run time complexity (O(n))
